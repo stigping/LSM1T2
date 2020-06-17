@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team 2 - LS6</title>
+    <link rel="stylesheet" href="../../css/menu.css">
+    <script src="https://kit.fontawesome.com/1e3bbfe500.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/puzzle.css">
+    <style>
+        body {
+            margin: 0;
+        }
+        .page {
+            height: 100vh;
+            position: relative;
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 25px 10fr 10px;
+            grid-template-areas: 'header header' 'mainContent mainContent' 'footer footer';
+        }
+        .mainContent {
+            grid-area: mainContent;
+        }
+        .footer {
+            position: absolute;
+            display: flex;
+            bottom: 0;
+            width: 100%;
+            height: 2rem;
+            background-color: lightgray;
+            grid-area: footer;
+            font-family: 'Courier New', Courier, monospace;
+            justify-content: center;
+            align-items: center;
+        }
+        @media only screen and (max-width: 958px) {
+            div.page {
+                grid-template-columns: 1fr;
+                grid-template-rows: 50px 4fr 20px;
+                grid-template-areas: 'header' 'mainContent' 'footer';
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="page">
+        <div class="header">
+            <ul>
+                <li><a href="../ls1/index.html">LiveShare 01</a></li>
+                <li><a href="../ls2/index.html">LiveShare 02</a></li>
+                <li><a href="../ls3/index.html">LiveShare 03</a></li>
+                <li><a href="../ls4/index.html">LiveShare 04</a></li>
+                <li><a href="../ls5/index.html">LiveShare 05</a></li>
+                <li><a href="../ls6/index.html">LiveShare 06</a></li>
+                <li><a href="../ls7/index.html">LiveShare 07</a></li>
+                <li><a href="../ls8/index.html">LiveShare 08</a></li>
+                <li><a href="../ls9/index.html">LiveShare 09</a></li>
+                <li><a href="../ls10/index.html">LiveShare 10</a></li>
+            </ul>
+        </div>
+        <div class="header-container">
+        <div class="header-toggle">
+                <a href="javascript:void(0);" class="icon" onclick="openMenu()">
+                    <i class="fas fa-bars"></i>
+                </a>
+            <a href="#" class="active menu-mainText">Menu</a>
+            <div id="menuLinks">
+                <a href="../ls1/index.html">LiveShare 01</a>
+                <a href="../ls2/index.html">LiveShare 02</a>
+                <a href="../ls3/index.html">LiveShare 03</a>
+                <a href="../ls4/index.html">LiveShare 04</a>
+                <a href="../ls5/index.html">LiveShare 05</a>
+                <a href="../ls6/index.html">LiveShare 06</a>
+                <a href="../ls7/index.html">LiveShare 07</a>
+                <a href="../ls8/index.html">LiveShare 08</a>
+                <a href="../ls9/index.html">LiveShare 09</a>
+                <a href="../ls10/index.html">LiveShare 10</a>
+            </div>
+        </div>
+    </div>
+    <div class="mainContent">
+
+        <div class="puzzle">
+            <div class="pieces">
+                <div>
+                    <img id="p1" src="../img/row-1-col-1.png" draggable="true" ondragstart="drag(event)">
+                    <img id="p2" src="../img/row-1-col-2.png" draggable="true" ondragstart="drag(event)">
+                    <img id="p3" src="../img/row-1-col-3.png" draggable="true" ondragstart="drag(event)">
+                </div>
+                <div>
+                    <img id="p4" src="../img/row-2-col-1.png" draggable="true" ondragstart="drag(event)">
+                    <img id="p5" src="../img/row-2-col-2.png" draggable="true" ondragstart="drag(event)">
+                    <img id="p6" src="../img/row-2-col-3.png" draggable="true" ondragstart="drag(event)">
+                </div>
+                <div>
+                    <img id="p7" src="../img/row-3-col-1.png" draggable="true" ondragstart="drag(event)">
+                    <img id="p8" src="../img/row-3-col-2.png" draggable="true" ondragstart="drag(event)">
+                    <img id="p9" src="../img/row-3-col-3.png" draggable="true" ondragstart="drag(event)">
+                </div>
+                </div>
+            <div class="pgrid">
+                <div class='puzzle1' ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class='puzzle1' ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class='puzzle1' ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class='puzzle1' ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class='puzzle1' ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class='puzzle1' ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class='puzzle1' ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class='puzzle1' ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class='puzzle1' ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="#" class="footer-text">
+            Team 2
+        </a>
+    </div>
+</div>
+
+<script src="../js/menu.js"></script>
+<script src="../js/puzzle.js"></script>
+
+</body>
+
+</html>

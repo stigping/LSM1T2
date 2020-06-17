@@ -1,0 +1,148 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+div.page {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 65px 10fr 20px;
+    grid-template-areas: 'header header' 'mainContent mainContent' 'footer footer';
+}
+div.header {
+    background-color: lightgray;
+    grid-area: header;
+}
+nav.main-nav {
+    width: 100%;
+	height: 75px !important;
+	position: relative;
+	top: 0;
+	left: 0;
+	text-align: left;
+}
+div.full {
+    margin: 0 2%;
+}
+.nav-logo{
+	float: left;
+	margin-right: 20px;
+}
+.nav-logo .logo{
+	display: table-cell;
+	vertical-align: middle;
+	width: 65px;
+    height: auto;
+    padding: 0px;
+    margin-left: 25px;
+}
+.inner-nav{
+    float: right;
+}
+.inner-nav ul{
+    list-style: none;
+	float: right;
+	margin: auto;
+	font-size: 11px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 1.3;
+}
+.inner-nav ul li {
+    float: left;
+    margin-left: 30px;
+    position: relative;
+}
+.inner-nav ul li a{
+	color: #777;
+    letter-spacing: 2px;
+	display: inline-block;
+	text-decoration: none;
+}
+div.menu {
+    grid-area: menu;
+    border-right: 2px solid lightgray;
+    height: 100%;
+}
+div.mainContent {
+    grid-area: mainContent;
+    padding-bottom: 2rem;
+}
+div.footer {
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    width: 100%;
+    height: 2rem;
+    background-color: lightgray;
+    grid-area: footer;
+    font-family: 'Courier New', Courier, monospace;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+    div.page {
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 1fr 4fr 20px;
+        grid-template-areas: 'header' 'menu' 'mainContent' 'footer';
+    }
+}
+div.codelock {
+    width: 500px;
+    height: 350px;
+}
+div.codelock button {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+#confirmButton {
+    width: 75px;
+    height: 50px;
+    padding-bottom: 150px;
+    padding-top: 150px;
+}
+div.clickergame {
+    font-size: 500%;
+    user-select: none;
+}
+div.game {
+    font-size: 500%;
+    user-select: none;
+    text-align: center;
+}
+.square {
+    position: absolute;
+}
+
+.calc {
+    float: left;
+    background-color: beige;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    vertical-align: middle;
+    font-family: helvetica;
+    font-size: 200%;
+    border: #bbbbaa solid 4px;
+    border-radius: 10px;
+}
+
+.resultBox {
+    width: 344px;
+    text-align: right;
+}
+
+.firstInRow {
+    clear: left;
+}
+
+.tnl1 {
+    padding-left: 5%;
+}

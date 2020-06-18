@@ -11,7 +11,7 @@ function show()
 function makeText(tekst)
 {
     if (hasNumber(tekst) == true) return ; 
-    if (hasMeta(tekst))
+    if (hasMeta(tekst) == true) return;
     ltekst = tekst.toLowerCase();
     answer = '';
     input = document.getElementById('inputs');

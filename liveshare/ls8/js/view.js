@@ -1,27 +1,28 @@
-var contentDiv = document.getElementById('content');
-var resultDiv = document.getElementById('result');
-let input = document.getElementById('inputs');
-
-//View
-function show() {
+function show()
+{
     contentDiv.innerHTML = `
     <input id='inputs' oninput="makeText(this.value)">
-    <button id='myBtn' onclick="refresh()">
+    <button id='myBtn' onclick="refresh()">Decode</button>
+    <button id='resetBtn' onclick="resetAnswer()">Reset</button>
     <div id="answer">${answer}</div>
     `;
-    //answer.innerText += translate(makeText);
-
-    
 }
-function refresh() {
+
+function makeText(tekst)
+{
     answer = '';
+    input = document.getElementById('inputs');
+    //console.log('I funksjon: ', inputText, inputText.length, input);
+    for (let i = 0; i < tekst.length; i++)
+    {
+        inputText = tekst[i];
+        console.log("Bokstav", inputText, "array", tekst[i],'Translated', morseCodeJSON[inputText],"Input: ", input.value);
+        answer += morseCodeJSON[inputText];
+    }
 }
 
-
-// input.addEventListener("keyup", function(event) {
-//     if (event.keyCode === 13)
-//     {
-//         event.preventDefault()
-//         document.getElementById("myBtn").click();
-//     }
-// });
+function refresh()
+{
+    input = '';
+    show();
+}

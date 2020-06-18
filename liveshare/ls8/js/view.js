@@ -10,13 +10,16 @@ function show()
 
 function makeText(tekst)
 {
+    if (hasNumber(tekst) == true) return ; 
+    if (hasMeta)
+    ltekst = tekst.toLowerCase();
     answer = '';
     input = document.getElementById('inputs');
-    //console.log('I funksjon: ', inputText, inputText.length, input);
-    for (let i = 0; i < tekst.length; i++)
+    for (let i = 0; i < ltekst.length; i++)
     {
-        inputText = tekst[i];
-        console.log("Bokstav", inputText, "array", tekst[i],'Translated', morseCodeJSON[inputText],"Input: ", input.value);
+        ltekst = ltekst.toLowerCase();
+        inputText = ltekst[i];
+        console.log("Bokstav", inputText, "array", ltekst[i],'Translated', morseCodeJSON[inputText],"Input: ", input.value);
         answer += morseCodeJSON[inputText];
     }
 }

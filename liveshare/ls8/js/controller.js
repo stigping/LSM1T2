@@ -16,7 +16,7 @@ function isAlphabetical(tekst)
             }
         }
     return true;
-};
+}
 
 function makeText(tekst)
 {
@@ -27,8 +27,12 @@ function makeText(tekst)
     for (let i = 0; i < ltekst.length; i++)
     {
         inputText = ltekst[i];
-        translatedText = morseCodeJSON[inputText];
-        //storedWords.push(morseCodeJSON[inputText]);
+        //translatedText = morseCodeJSON[inputText];
+        storedWords.push(morseCodeJSON[inputText]);
+
+
+        //storedWords.splice(0 , storedWords.length, storedWords)
+        storedWords.splice(0 , i, inputText);
         console.log("ltekst: ", ltekst, 'inputText: ', inputText, 'storedWords: ', storedWords);
         
       //  console.log("Bokstav", inputText, "array", ltekst[i],'Translated', morseCodeJSON[inputText],"Input: ", input.value);
@@ -38,7 +42,10 @@ function makeText(tekst)
     //answer = savedWords;
     storedWords = [];
     console.log(answer); */
+    // noSep(storedWords);
 }
+
+// ['h,e,i p,å d,e,g'] ['h','e','i']
 
 function noSep(storedWords=[], separator=' ')
 {

@@ -3,6 +3,11 @@ let resultDiv = document.getElementById('result');
 let storedWords = [];
 let savedWords = '';
 
+// hva er dette = morseCodeJSON[,+inputs];
+// inputs + ,
+// morsekode = [string =('h','e','i', 'p','å', 'd','e','g')]
+// input = morsekode
+
 let input = '';
 let answer = '';
 

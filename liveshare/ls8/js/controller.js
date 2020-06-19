@@ -27,7 +27,7 @@ function makeText(tekst)
     for (let i = 0; i < ltekst.length; i++)
     {
         inputText = ltekst[i];
-        //answer += morseCodeJSON[inputText];
+        translatedText = morseCodeJSON[inputText];
         //storedWords.push(morseCodeJSON[inputText]);
         console.log("ltekst: ", ltekst, 'inputText: ', inputText, 'storedWords: ', storedWords);
         

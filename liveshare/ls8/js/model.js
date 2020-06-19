@@ -1,5 +1,7 @@
 let contentDiv = document.getElementById('content');
 let resultDiv = document.getElementById('result');
+let storedWords = [];
+let savedWords = '';
 
 let input = '';
 let answer = '';

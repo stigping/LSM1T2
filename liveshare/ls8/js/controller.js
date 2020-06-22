@@ -5,12 +5,12 @@ function isAlphabetical(tekst)
     for (i = 0, len = tekst.length; i < len; i++) {
       code = tekst.charCodeAt(i);
       if (!(code > 64 && code < 91) && 
-            !(code > 96 && code < 123) &&
-            !(code == 32) &&        // SPACE
-            !(code == 230||198) &&  // Æ
-            !(code == 248||216) &&  // Ø
-            !(code == 197||229))    // Å
-
+            !(code > 96 && code < 123) &&    
+            !(code > 47 && code < 58) &&     
+            !(code == 32) &&                 // SPACE
+            !(code == 230 || code == 198) && // Æ
+            !(code == 248 || code == 216) && // Ø
+            !(code == 197 || code == 229))   // Å
             {
                 return false;
             }
@@ -44,3 +44,17 @@ function resetAnswer()
     storedWords = [];
     show();
 }
+
+function isAlphabetical2(tekst) {
+    let code, i, len;
+  
+    for (i = 0, len = tekst.length; i < len; i++) {
+      code = tekst.charCodeAt(i);
+      if (!(code > 64 && code < 91) && 
+          !(code > 96 && code < 123) &&
+          !(code == 229 || code == 197)) {
+        return false;
+      }
+    }
+    return true;
+  };

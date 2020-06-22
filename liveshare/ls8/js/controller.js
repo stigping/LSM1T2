@@ -6,10 +6,10 @@ function isAlphabetical(tekst)
       code = tekst.charCodeAt(i);
       if (!(code > 64 && code < 91) && 
             !(code > 96 && code < 123) &&
-            !(code == 32) &&
-            !(code == 230) &&
-            !(code == 248) &&
-            !(code == 229))
+            !(code == 32) &&        // SPACE
+            !(code == 230||198) &&  // Æ
+            !(code == 248||216) &&  // Ø
+            !(code == 197||229))    // Å
 
             {
                 return false;

@@ -27,57 +27,20 @@ function makeText(tekst)
     for (let i = 0; i < ltekst.length; i++)
     {
         inputText = ltekst[i];
-        //translatedText = morseCodeJSON[inputText];
-        storedWords.push(morseCodeJSON[inputText]);
-
-
-        //storedWords.splice(0 , storedWords.length, storedWords)
-        storedWords.splice(0 , i, inputText);
-        console.log("ltekst: ", ltekst, 'inputText: ', inputText, 'storedWords: ', storedWords);
-        
-      //  console.log("Bokstav", inputText, "array", ltekst[i],'Translated', morseCodeJSON[inputText],"Input: ", input.value);
+        console.log("Bokstav", inputText, "array", ltekst[i],'Translated', morseCodeJSON[inputText],"Input: ", input.value);
+        answer += morseCodeJSON[inputText];
     }
-    /*answer = storedWords.join(' ');
-    savedWords += storedWords.join(' ');
-    //answer = savedWords;
-    storedWords = [];
-    console.log(answer); */
-    // noSep(storedWords);
 }
 
-// ['h,e,i p,å d,e,g'] ['h','e','i']
-
-function noSep(storedWords=[], separator=' ')
+function refresh()
 {
-    let answer = '';
-    
-    let item;
-    for(let index = 0; index < storedWords.length; index++)
-    {
-        item = storedWords [index];
-
-        if (index == 0)
-        {
-            answer += item;
-        }
-        else
-        {
-            answer += `${separator}${item}`;
-        }
-        return answer;
-    }
-
+    input = '';
+    show();
 }
 
 function resetAnswer()
 {
     answer = '';
     storedWords = [];
-    show();
-}
-
-function refresh()
-{
-    input = '';
     show();
 }

@@ -6,4 +6,6 @@ function show()
     <button id='resetBtn' onclick="resetAnswer()">Reset</button>
     <div id="answer">${answer}</div>
     `;
+
 }
+

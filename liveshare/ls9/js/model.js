@@ -55,7 +55,7 @@ let fnoteFm6 = document.getElementById('fnfm6');
 let fnoteGm6 = document.getElementById('fngm6');
 
 //
-let pianoVar = ` <svg viewBox="0 0 322 120" width="100%" height="auto">
+let pianoVar = ` 
 <rect onclick="play(noteC)" style="fill:white;stroke:black" x="0" y="0" width="23" height="120"/>
 <rect onclick="play(noteD)" style="fill:white;stroke:black" x="23" y="0" width="23" height="120"/>
 <rect onclick="play(noteE)" style="fill:white;stroke:black" x="46" y="0" width="23" height="120"/>
@@ -84,10 +84,9 @@ let pianoVar = ` <svg viewBox="0 0 322 120" width="100%" height="auto">
 <rect onclick="play(noteFm6)" style="fill:black;stroke:black" x="246.66666" y="0" width="13" height="80"/>
 <rect onclick="play(noteGm6)" style="fill:black;stroke:black" x="268.66666" y="0" width="13" height="80"/>
 <rect onclick="play(noteAm6)" style="fill:black;stroke:black" x="292.75" y="0" width="13" height="80"/>
-</svg>
 `;
 
-let fluteVar =  ` <svg viewBox="0 0 322 120" width="100%" height="auto">
+let fluteVar =  `
 <rect onclick="play(fnoteC)" style="fill:white;stroke:black" x="0" y="0" width="23" height="120"/>
 <rect onclick="play(fnoteD)" style="fill:white;stroke:black" x="23" y="0" width="23" height="120"/>
 <rect onclick="play(fnoteE)" style="fill:white;stroke:black" x="46" y="0" width="23" height="120"/>
@@ -116,7 +115,6 @@ let fluteVar =  ` <svg viewBox="0 0 322 120" width="100%" height="auto">
 <rect onclick="play(fnoteFm6)" style="fill:black;stroke:black" x="246.66666" y="0" width="13" height="80"/>
 <rect onclick="play(fnoteGm6)" style="fill:black;stroke:black" x="268.66666" y="0" width="13" height="80"/>
 <rect onclick="play(fnoteAm6)" style="fill:black;stroke:black" x="292.75" y="0" width="13" height="80"/>
-</svg>
 `;
 
 let soundSet;

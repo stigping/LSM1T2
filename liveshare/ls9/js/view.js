@@ -4,9 +4,9 @@ function show() {
     if (document.getElementById('sounds').value == 'piano') soundSet = pianoVar;
     if (document.getElementById('sounds').value == 'flute') soundSet = fluteVar;
     pianoDiv.innerHTML = `
-    
+    <svg viewBox="0 0 322 120" width="100%" height="100%">
     ${soundSet}
-    
+    </svg>
 
     
     `;

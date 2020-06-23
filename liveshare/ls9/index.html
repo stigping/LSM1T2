@@ -85,6 +85,15 @@
 <br>
 <div id="piano"></div>
 
+<form action="/action_page.php">
+    <label for="instruments">Choose a sound set:</label>
+    <select id="sounds" name="soundset">
+      <option value="piano">Piano</option>
+      <option value="flute">Flute</option>
+    </select>
+    <input type="button" value="Set" onclick="show()">
+  </form>
+
 
 
 <audio src="audio/A.wav" id="na"></audio>

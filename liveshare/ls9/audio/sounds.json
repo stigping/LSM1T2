@@ -1,0 +1,50 @@
+[
+	{
+		"title": "noteA",
+		"src": "audio/A.wav"
+	},
+	{
+		"title": "noteB",
+		"src": "audio/B.wav"
+	},
+	{
+		"title": "noteC",
+		"src": "audio/C.wav"
+	},
+	{
+		"title": "noteD",
+		"src": "audio/D.wav"
+	},
+	{
+		"title": "noteE",
+		"src": "audio/E.wav"
+	},
+	{
+		"title": "noteF",
+		"src": "audio/F.wav"
+	},
+	{
+		"title": "noteG",
+		"src": "audio/G.wav"
+	},
+	{
+		"title": "noteAm",
+		"src": "audio/Aminor.wav"
+	},
+	{
+		"title": "noteCm",
+		"src": "audio/Csharp.wav"
+	},
+	{
+		"title": "noteDm",
+		"src": "audio/Dminor.wav"
+	},
+	{
+		"title": "noteFm",
+		"src": "audio/Fminor.wav"
+	},
+	{
+		"title": "noteGm",
+		"src": "audio/Gminor.wav"
+	}
+]

@@ -1,3 +1,6 @@
+let pianoDiv = document.getElementById('piano')
+let soundSet;
+
 //Piano Noter
 
 let noteA = document.getElementById('na');
@@ -54,67 +57,65 @@ let fnoteDm6 = document.getElementById('fndm6');
 let fnoteFm6 = document.getElementById('fnfm6');
 let fnoteGm6 = document.getElementById('fngm6');
 
-//
-let pianoVar = ` 
-<rect onclick="play(noteC)" style="fill:white;stroke:black" x="0" y="0" width="23" height="120"/>
-<rect onclick="play(noteD)" style="fill:white;stroke:black" x="23" y="0" width="23" height="120"/>
-<rect onclick="play(noteE)" style="fill:white;stroke:black" x="46" y="0" width="23" height="120"/>
-<rect onclick="play(noteF)" style="fill:white;stroke:black" x="69" y="0" width="23" height="120"/>
-<rect onclick="play(noteG)" style="fill:white;stroke:black" x="92" y="0" width="23" height="120"/>
-<rect onclick="play(noteA)" style="fill:white;stroke:black" x="115" y="0" width="23" height="120"/>
-<rect onclick="play(noteB)" style="fill:white;stroke:black" x="138" y="0" width="23" height="120"/>
-<!--  White keys 2  -->
-<rect onclick="play(noteC6)" style="fill:white;stroke:black" x="161" y="0" width="23" height="120"/>
-<rect onclick="play(noteD6)" style="fill:white;stroke:black" x="184" y="0" width="23" height="120"/>
-<rect onclick="play(noteE6)" style="fill:white;stroke:black" x="207" y="0" width="23" height="120"/>
-<rect onclick="play(noteF6)" style="fill:white;stroke:black" x="230" y="0" width="23" height="120"/>
-<rect onclick="play(noteG6)" style="fill:white;stroke:black" x="253" y="0" width="23" height="120"/>
-<rect onclick="play(noteA6)" style="fill:white;stroke:black" x="276" y="0" width="23" height="120"/>
-<rect onclick="play(noteB6)" style="fill:white;stroke:black" x="299" y="0" width="23" height="120"/>
+// //
+// let pianoVar = ` 
+// <rect onclick="play(noteC)" style="fill:white;stroke:black" x="0" y="0" width="23" height="120"/>
+// <rect onclick="play(noteD)" style="fill:white;stroke:black" x="23" y="0" width="23" height="120"/>
+// <rect onclick="play(noteE)" style="fill:white;stroke:black" x="46" y="0" width="23" height="120"/>
+// <rect onclick="play(noteF)" style="fill:white;stroke:black" x="69" y="0" width="23" height="120"/>
+// <rect onclick="play(noteG)" style="fill:white;stroke:black" x="92" y="0" width="23" height="120"/>
+// <rect onclick="play(noteA)" style="fill:white;stroke:black" x="115" y="0" width="23" height="120"/>
+// <rect onclick="play(noteB)" style="fill:white;stroke:black" x="138" y="0" width="23" height="120"/>
+// <!--  White keys 2  -->
+// <rect onclick="play(noteC6)" style="fill:white;stroke:black" x="161" y="0" width="23" height="120"/>
+// <rect onclick="play(noteD6)" style="fill:white;stroke:black" x="184" y="0" width="23" height="120"/>
+// <rect onclick="play(noteE6)" style="fill:white;stroke:black" x="207" y="0" width="23" height="120"/>
+// <rect onclick="play(noteF6)" style="fill:white;stroke:black" x="230" y="0" width="23" height="120"/>
+// <rect onclick="play(noteG6)" style="fill:white;stroke:black" x="253" y="0" width="23" height="120"/>
+// <rect onclick="play(noteA6)" style="fill:white;stroke:black" x="276" y="0" width="23" height="120"/>
+// <rect onclick="play(noteB6)" style="fill:white;stroke:black" x="299" y="0" width="23" height="120"/>
 
-<!--  Black keys  -->
-<rect onclick="play(noteCm)" style="fill:black;stroke:black" x="16" y="0" width="13" height="80"/>
-<rect onclick="play(noteDm)" style="fill:black;stroke:black" x="40" y="0" width="13" height="80"/>
-<rect onclick="play(noteFm)" style="fill:black;stroke:black" x="85.25" y="0" width="13" height="80"/>
-<rect onclick="play(noteGm)" style="fill:black;stroke:black" x="108.25" y="0" width="13" height="80"/>
-<rect onclick="play(noteAm)" style="fill:black;stroke:black" x="132.75" y="0" width="13" height="80"/>
-<!--  Black keys 2  -->
-<rect onclick="play(noteCm6)" style="fill:black;stroke:black" x="177.66666" y="0" width="13" height="80"/>
-<rect onclick="play(noteDm6)" style="fill:black;stroke:black" x="200.66666" y="0" width="13" height="80"/>
-<rect onclick="play(noteFm6)" style="fill:black;stroke:black" x="246.66666" y="0" width="13" height="80"/>
-<rect onclick="play(noteGm6)" style="fill:black;stroke:black" x="268.66666" y="0" width="13" height="80"/>
-<rect onclick="play(noteAm6)" style="fill:black;stroke:black" x="292.75" y="0" width="13" height="80"/>
-`;
+// <!--  Black keys  -->
+// <rect onclick="play(noteCm)" style="fill:black;stroke:black" x="16" y="0" width="13" height="80"/>
+// <rect onclick="play(noteDm)" style="fill:black;stroke:black" x="40" y="0" width="13" height="80"/>
+// <rect onclick="play(noteFm)" style="fill:black;stroke:black" x="85.25" y="0" width="13" height="80"/>
+// <rect onclick="play(noteGm)" style="fill:black;stroke:black" x="108.25" y="0" width="13" height="80"/>
+// <rect onclick="play(noteAm)" style="fill:black;stroke:black" x="132.75" y="0" width="13" height="80"/>
+// <!--  Black keys 2  -->
+// <rect onclick="play(noteCm6)" style="fill:black;stroke:black" x="177.66666" y="0" width="13" height="80"/>
+// <rect onclick="play(noteDm6)" style="fill:black;stroke:black" x="200.66666" y="0" width="13" height="80"/>
+// <rect onclick="play(noteFm6)" style="fill:black;stroke:black" x="246.66666" y="0" width="13" height="80"/>
+// <rect onclick="play(noteGm6)" style="fill:black;stroke:black" x="268.66666" y="0" width="13" height="80"/>
+// <rect onclick="play(noteAm6)" style="fill:black;stroke:black" x="292.75" y="0" width="13" height="80"/>
+// `;
 
-let fluteVar =  `
-<rect onclick="play(fnoteC)" style="fill:white;stroke:black" x="0" y="0" width="23" height="120"/>
-<rect onclick="play(fnoteD)" style="fill:white;stroke:black" x="23" y="0" width="23" height="120"/>
-<rect onclick="play(fnoteE)" style="fill:white;stroke:black" x="46" y="0" width="23" height="120"/>
-<rect onclick="play(fnoteF)" style="fill:white;stroke:black" x="69" y="0" width="23" height="120"/>
-<rect onclick="play(fnoteG)" style="fill:white;stroke:black" x="92" y="0" width="23" height="120"/>
-<rect onclick="play(fnoteA)" style="fill:white;stroke:black" x="115" y="0" width="23" height="120"/>
-<rect onclick="play(fnoteB)" style="fill:white;stroke:black" x="138" y="0" width="23" height="120"/>
-<!--  White keys 2  -->
-<rect onclick="play(fnoteC6)" style="fill:white;stroke:black" x="161" y="0" width="23" height="120"/>
-<rect onclick="play(fnoteD6)" style="fill:white;stroke:black" x="184" y="0" width="23" height="120"/>
-<rect onclick="play(fnoteE6)" style="fill:white;stroke:black" x="207" y="0" width="23" height="120"/>
-<rect onclick="play(fnoteF6)" style="fill:white;stroke:black" x="230" y="0" width="23" height="120"/>
-<rect onclick="play(fnoteG6)" style="fill:white;stroke:black" x="253" y="0" width="23" height="120"/>
-<rect onclick="play(fnoteA6)" style="fill:white;stroke:black" x="276" y="0" width="23" height="120"/>
-<rect onclick="play(fnoteB6)" style="fill:white;stroke:black" x="299" y="0" width="23" height="120"/>
+// let fluteVar =  `
+// <rect onclick="play(fnoteC)" style="fill:white;stroke:black" x="0" y="0" width="23" height="120"/>
+// <rect onclick="play(fnoteD)" style="fill:white;stroke:black" x="23" y="0" width="23" height="120"/>
+// <rect onclick="play(fnoteE)" style="fill:white;stroke:black" x="46" y="0" width="23" height="120"/>
+// <rect onclick="play(fnoteF)" style="fill:white;stroke:black" x="69" y="0" width="23" height="120"/>
+// <rect onclick="play(fnoteG)" style="fill:white;stroke:black" x="92" y="0" width="23" height="120"/>
+// <rect onclick="play(fnoteA)" style="fill:white;stroke:black" x="115" y="0" width="23" height="120"/>
+// <rect onclick="play(fnoteB)" style="fill:white;stroke:black" x="138" y="0" width="23" height="120"/>
+// <!--  White keys 2  -->
+// <rect onclick="play(fnoteC6)" style="fill:white;stroke:black" x="161" y="0" width="23" height="120"/>
+// <rect onclick="play(fnoteD6)" style="fill:white;stroke:black" x="184" y="0" width="23" height="120"/>
+// <rect onclick="play(fnoteE6)" style="fill:white;stroke:black" x="207" y="0" width="23" height="120"/>
+// <rect onclick="play(fnoteF6)" style="fill:white;stroke:black" x="230" y="0" width="23" height="120"/>
+// <rect onclick="play(fnoteG6)" style="fill:white;stroke:black" x="253" y="0" width="23" height="120"/>
+// <rect onclick="play(fnoteA6)" style="fill:white;stroke:black" x="276" y="0" width="23" height="120"/>
+// <rect onclick="play(fnoteB6)" style="fill:white;stroke:black" x="299" y="0" width="23" height="120"/>
 
-<!--  Black keys  -->
-<rect onclick="play(fnoteCm)" style="fill:black;stroke:black" x="16" y="0" width="13" height="80"/>
-<rect onclick="play(fnoteDm)" style="fill:black;stroke:black" x="40" y="0" width="13" height="80"/>
-<rect onclick="play(fnoteFm)" style="fill:black;stroke:black" x="85.25" y="0" width="13" height="80"/>
-<rect onclick="play(fnoteGm)" style="fill:black;stroke:black" x="108.25" y="0" width="13" height="80"/>
-<rect onclick="play(fnoteAm)" style="fill:black;stroke:black" x="132.75" y="0" width="13" height="80"/>
-<!--  Black keys 2  -->
-<rect onclick="play(fnoteCm6)" style="fill:black;stroke:black" x="177.66666" y="0" width="13" height="80"/>
-<rect onclick="play(fnoteDm6)" style="fill:black;stroke:black" x="200.66666" y="0" width="13" height="80"/>
-<rect onclick="play(fnoteFm6)" style="fill:black;stroke:black" x="246.66666" y="0" width="13" height="80"/>
-<rect onclick="play(fnoteGm6)" style="fill:black;stroke:black" x="268.66666" y="0" width="13" height="80"/>
-<rect onclick="play(fnoteAm6)" style="fill:black;stroke:black" x="292.75" y="0" width="13" height="80"/>
-`;
-
-let soundSet;
+// <!--  Black keys  -->
+// <rect onclick="play(fnoteCm)" style="fill:black;stroke:black" x="16" y="0" width="13" height="80"/>
+// <rect onclick="play(fnoteDm)" style="fill:black;stroke:black" x="40" y="0" width="13" height="80"/>
+// <rect onclick="play(fnoteFm)" style="fill:black;stroke:black" x="85.25" y="0" width="13" height="80"/>
+// <rect onclick="play(fnoteGm)" style="fill:black;stroke:black" x="108.25" y="0" width="13" height="80"/>
+// <rect onclick="play(fnoteAm)" style="fill:black;stroke:black" x="132.75" y="0" width="13" height="80"/>
+// <!--  Black keys 2  -->
+// <rect onclick="play(fnoteCm6)" style="fill:black;stroke:black" x="177.66666" y="0" width="13" height="80"/>
+// <rect onclick="play(fnoteDm6)" style="fill:black;stroke:black" x="200.66666" y="0" width="13" height="80"/>
+// <rect onclick="play(fnoteFm6)" style="fill:black;stroke:black" x="246.66666" y="0" width="13" height="80"/>
+// <rect onclick="play(fnoteGm6)" style="fill:black;stroke:black" x="268.66666" y="0" width="13" height="80"/>
+// <rect onclick="play(fnoteAm6)" style="fill:black;stroke:black" x="292.75" y="0" width="13" height="80"/>
+// `;

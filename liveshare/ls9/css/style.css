@@ -1,19 +1,23 @@
-body {
+body
+{
     padding: 0;
     margin: 0;
 }
-div.page {
+div.page
+{
     height: 100vh;
     display: grid;
     grid-template-columns: 200px 1fr;
     grid-template-rows: 65px 10fr 20px;
     grid-template-areas: 'header header' 'mainContent mainContent' 'footer footer';
 }
-div.header {
+div.header
+{
     background-color: lightgray;
     grid-area: header;
 }
-nav.main-nav {
+nav.main-nav
+{
     width: 100%;
 	height: 75px !important;
 	position: relative;
@@ -21,14 +25,17 @@ nav.main-nav {
 	left: 0;
 	text-align: left;
 }
-div.full {
+div.full
+{
     margin: 0 2%;
 }
-.nav-logo{
+.nav-logo
+{
 	float: left;
 	margin-right: 20px;
 }
-.nav-logo .logo{
+.nav-logo .logo
+{
 	display: table-cell;
 	vertical-align: middle;
 	width: 65px;
@@ -36,10 +43,12 @@ div.full {
     padding: 0px;
     margin-left: 25px;
 }
-.inner-nav{
+.inner-nav
+{
     float: right;
 }
-.inner-nav ul{
+.inner-nav ul
+{
     list-style: none;
 	float: right;
 	margin: auto;
@@ -50,28 +59,33 @@ div.full {
 	text-align: center;
 	line-height: 1.3;
 }
-.inner-nav ul li {
+.inner-nav ul li
+{
     float: left;
     margin-left: 30px;
     position: relative;
 }
-.inner-nav ul li a{
+.inner-nav ul li a
+{
 	color: #777;
     letter-spacing: 2px;
 	display: inline-block;
 	text-decoration: none;
 }
-div.menu {
+div.menu
+{
     grid-area: menu;
     border-right: 2px solid lightgray;
     height: 100%;
 }
-div.mainContent {
+div.mainContent
+{
     grid-area: mainContent;
     padding-bottom: 2rem;
     user-select: none;
 }
-div.footer {
+div.footer
+{
     position: absolute;
     display: flex;
     bottom: 0;
@@ -84,8 +98,10 @@ div.footer {
     align-items: center;
 }
 
-@media only screen and (max-width: 600px) {
-    div.page {
+@media only screen and (max-width: 600px)
+{
+    div.page
+    {
         grid-template-columns: 1fr;
         grid-template-rows: 50px 1fr 4fr 20px;
         grid-template-areas: 'header' 'menu' 'mainContent' 'footer';
